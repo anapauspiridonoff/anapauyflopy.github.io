@@ -1,0 +1,309 @@
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL Y BOX MODEL
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FFF0F5;
+    color: #4A1525;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   2. ENCABEZADO (HEADER) Y NAVEGACIÓN
+   ========================================== */
+header {
+    background-color: #EAE7E2;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 3px solid #FF85A2;
+}
+
+header img {
+    max-width: 600px;
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ebab21;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #FF477E;
+}
+
+nav {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #FF70A6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #FFE5EC;
+    color: #FF477E;
+}
+
+nav ul li a.active {
+    border-bottom: 3px solid #FF477E;
+    color: #FF477E;
+}
+
+/* ==========================================
+   3. MAQUETACIÓN DE CONTENEDORES (FLEXBOX)
+   ========================================== */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+main {
+    flex: 2;
+}
+
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ==========================================
+   4. ESTILOS DE CAJAS PRINCIPALES
+   ========================================== */
+.caja-vertical {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #FFC6FF;
+}
+
+/* ==========================================
+   5. ESTILOS DE TARJETAS FLIP (NOSOTRAS)
+   ========================================== */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Cada tarjeta tiene perspectiva 3D */
+.tarjeta-flip {
+    background-color: transparent;
+    width: 220px;
+    height: 300px;
+    perspective: 1000px; /* da efecto 3D */
+}
+
+/* El contenedor interno que gira */
+.tarjeta-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(255, 71, 126, 0.10);
+}
+
+/* Al pasar el mouse, la tarjeta gira 180° */
+.tarjeta-flip:hover .tarjeta-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras: front y back */
+.tarjeta-front, .tarjeta-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* el nombre queda abajo */
+}
+
+/* ----- FRENTE: imagen + nombre (abajo) ----- */
+.tarjeta-front {
+    background-color: #FFF9FB;
+    border: 1px solid #FFE5EC;
+}
+
+.tarjeta-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nombre-tarjeta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(255, 71, 126, 0.75));
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 20px 0 14px 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* ----- REVERSO: descripción (ocupa toda la tarjeta) ----- */
+.tarjeta-back {
+    background: linear-gradient(145deg, #FFE5EC, #FFF0F5);
+    color: #4A1525;
+    transform: rotateY(180deg);
+    padding: 22px 16px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FFC6FF;
+    box-shadow: inset 0 0 0 2px #FFFFFF80;
+}
+
+.tarjeta-back p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tarjeta-back p strong {
+    color: #FF477E;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ==========================================
+   6. ESTILOS DE LAS CAJAS LATERALES (ASIDE)
+   ========================================== */
+.caja-aside {
+    background-color: #FFFFFF;
+    padding: 18px 18px 20px;
+    border-radius: 8px;
+    border-left: 5px solid #FFB7B2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+
+}
+
+.caja-aside h3 {
+    color: #FF477E;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.caja-aside ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.caja-aside ul li {
+    margin: 6px 0;
+}
+
+.caja-aside ul li a {
+    color: #FF477E;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.caja-aside ul li a:hover {
+    text-decoration: underline;
+}
+
+.lateral-2 hr {
+    border: 1px dashed #FFC6FF;
+    margin: 12px 0;
+    width: 10cm;
+}
+
+/* ==========================================
+   7. PIE DE PÁGINA (FOOTER) Y RESPONSIVE
+   ========================================== */
+footer {
+    background-color: #919090;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   8. RESPONSIVE (MÓVILES)
+   ========================================== */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor-tarjetas {
+        gap: 20px;
+    }
+
+    .tarjeta-flip {
+        width: 180px;
+        height: 250px;
+    }
+
+    .tarjeta-back p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta-flip {
+        width: 160px;
+        height: 220px;
+    }
+
+    .nombre-tarjeta {
+        font-size: 1rem;
+        padding: 14px 0 10px 0;
+    }
+
+    .tarjeta-back p {
+        font-size: 0.8rem;
+    }
+}
+
+ 

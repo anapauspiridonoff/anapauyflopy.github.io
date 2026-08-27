@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaladBFF - Calendario</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para la cuadrícula y las tablas de los meses */
+        .grid-calendario {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .mes-tabla {
+            width: 100%;
+            border-collapse: collapse;
+            background: #FFFFFF;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.85rem;
+        }
+        .mes-tabla th, .mes-tabla td {
+            border: 1px solid #FFC6FF;
+            text-align: center;
+            padding: 5px;
+        }
+        .mes-tabla th {
+            background-color: #FFB7B2;
+            color: #FFFFFF;
+        }
+        .mes-tabla .nombre-mes {
+            background-color: #FF477E;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .dia-especial {
+            background-color: #FF85A2 !important;
+            color: #FFFFFF;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header>
+        <div class="header-logo">
+            <img src="imagenes/salad.jpg" alt="Logo de SaladBFF">
+        </div>
+        <div class="header-text">
+            <h1>SaladBFF</h1>
+            <p>El rincón especial para nuestra amistad y recuerdos.</p>
+        </div>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+            <li><a href="amistad.html">Amistad</a></li>
+            <li><a href="nosotras.html" >Nosotras</a></li> 
+            <li><a href="calendario.html" class="active">Calendario</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor Principal -->
+    <div class="main-container">
+        
+        <!-- SECCIÓN DE LA IZQUIERDA (MAIN) -->
+        <main>
+            <section class="caja-vertical">
+                <div class="bloque-contenido">
+                    <h2>Calendario de las Ensaladas 2026</h2>
+                    <p>Nuestra agenda oficial a partir de la gran fecha de inspiración. Los días especiales están resaltados.</p>
+                    
+                    <!-- Contenedor en cuadrícula para los meses -->
+                    <div class="grid-calendario">
+                        
+                        <!-- JUNIO 2026 -->
+                        <table class="mes-tabla">
+                            <thead>
+                                <tr><th colspan="7" class="nombre-mes">Junio 2026</th></tr>
+                                <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td class="dia-especial" title="Nace SaladBFF">2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                                <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+                                <tr><td>15</td><td>16</td><td class="dia-especial" title="Nace SaladBFF">17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+                                <tr><td>22</td><td>23</td><td class="dia-especial" title="Nace SaladBFF">24</td><td>25</td><td>26</td><td class="dia-especial" title="Nace SaladBFF">27</td><td>28</td></tr>
+                                <tr><td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <!-- JULIO 2026 -->
+                        <table class="mes-tabla">
+                            <thead>
+                                <tr><th colspan="7" class="nombre-mes">Julio 2026</th></tr>
+                                <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                                <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                                <tr><td>13</td><td class="dia-especial" title="Nace SaladBFF">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+                                <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+                                <tr><td>27</td><td>28</td><td class="dia-especial" title="Nace SaladBFF">29</td><td>30</td><td>31</td><td></td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <!-- AGOSTO 2026 -->
+                        <table class="mes-tabla">
+                            <thead>
+                                <tr><th colspan="7" class="nombre-mes">Agosto 2026</th></tr>
+                                <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td></tr>
+                                <tr><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+                                <tr><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+                                <tr><td>17</td><td>18</td><td>19</td><td>20</td><td class="dia-especial" title="Nace SaladBFF">21</td><td>22</td><td>23</td></tr>
+                                <tr><td>24</td><td>25</td><td class="dia-especial" title="Nace SaladBFF">26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+                                <tr><td>31</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <!-- SEPTIEMBRE 2026 -->
+                        <table class="mes-tabla">
+                            <thead>
+                                <tr><th colspan="7" class="nombre-mes">Septiembre 2026</th></tr>
+                                <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+                                <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+                                <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+                                <tr><td class="dia-especial" title="Nace SaladBFF">28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <!-- OCTUBRE 2026 -->
+                        <table class="mes-tabla">
+                            <thead>
+                                <tr><th colspan="7" class="nombre-mes">Octubre 2026</th></tr>
+                                <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                                <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+                                <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                                <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                                <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <!-- NOVIEMBRE 2026 -->
+                        <table class="mes-tabla">
+                            <thead>
+                                <tr><th colspan="7" class="nombre-mes">Noviembre 2026</th></tr>
+                                <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                                <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                                <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+                                <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                                <tr><td>30</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <!-- DICIEMBRE 2026 -->
+                        <table class="mes-tabla">
+                            <thead>
+                                <tr><th colspan="7" class="nombre-mes">Diciembre 2026</th></tr>
+                                <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+                                <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+                                <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+                                <tr><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- SECCIÓN DE LA DERECHA (ASIDE) -->
+        <aside>
+            <div class="caja-aside lateral-1">
+                <h3>Referencias</h3>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>2 de Junio:</strong> Farra en Dios sabra donde.</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>17 de Junio:</strong> Farra en Dios sabra donde.</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>24 de Junio:</strong> Juntada en lo de Ana para el proyecto de Ciencias.</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>27 de Junio:</strong> Juntada en lo de Flopy para divertirnos.</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>14 de Julio:</strong> Juntada en lo de Jazmin.</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>29 de Julio:</strong> Dia de las hamburguesas.</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>21 de Agosto:</strong> Cumpleaños de flopy banana.</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>26 de Agosto:</strong> Cumpleaños de Ana, carboncito de flopy banana</p>
+                <p><span style="display:inline-block; width:12px; height:12px; background-color:#FF85A2; border-radius:3px;"></span> <strong>28 de Septiembre:</strong> Cumpleaños de Mapaz Hot Dog</p>
+            </div>
+            <div class="caja-aside lateral-2">
+                <h3>Recomendacion de las Ensaladas</h3>
+                <p>Si quieres tener un grupo super purete como el nuestro.........QUE LASTIMA, SEGUI QUERIENDO, por que nosotras somos las mejores, unicas, magnificas e inigualables, nadie nos superara.</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 SaladBFF. Desarrollado por Flopy y Ana 2° BTI.</p>
+    </footer>
+
+</body>
+</html>
